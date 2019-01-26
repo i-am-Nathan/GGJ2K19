@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33970514087328438}
   - component: {fileID: 23718674292727990}
   - component: {fileID: 136462259052312320}
-  - component: {fileID: 114002219809796066}
+  - component: {fileID: 114941453306039476}
   m_Layer: 0
   m_Name: Human
   m_TagString: Untagged
@@ -159,7 +159,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719955470030354}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114002219809796066
+--- !u!114 &114941453306039476
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719955470030354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feab8e82981cdea4b85eee6a141257ed, type: 3}
+  m_Script: {fileID: 11500000, guid: b401e9f43f41626459880420bd158580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135114121357985364

@@ -18,8 +18,8 @@ public class CharacterMovement : MonoBehaviour {
         if (Input.GetButtonDown("Fire1"))
         {
             isBat = !isBat;
-            this.transform.Find("Cylinder").gameObject.SetActive(!isBat);
-            this.transform.Find("Sphere").gameObject.SetActive(isBat);
+            this.transform.Find("Human").gameObject.SetActive(!isBat);
+            this.transform.Find("Bat").gameObject.SetActive(isBat);
             if (isBat)
             {
                 speed = 20f;
