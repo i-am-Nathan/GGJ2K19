@@ -8,30 +8,31 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField] private float _timer;
     [SerializeField] private CharacterMovement _player;
     [SerializeField] private HomeBehavior _home;
-    [SerializeField] private float _sceneTransitionDelay;
-   
+    [SerializeField] private float _sceneTransitionDelay = 2f;
+    [SerializeField] private DayNightController _dayNightController;
+    
 
 
 	// Use this for initialization
 	void Start ()
 	{
-	    _player.PlayerKilled += GameOver;
-        _home.VictoryTriggered += Victory;
+	   // _player.PlayerKilled += GameOver;
+	    _dayNightController.TimeOut += GameOver;
+     //   _home.VictoryTriggered += Victory;
 
 	}
 
     void Victory()
     {
-        LoadNextSceneDelayed(_sceneTransitionDelay, 3);
+        StartCoroutine(LoadNextSceneDelayed(_sceneTransitionDelay, 3));
     }
 
     void GameOver()
     {
         //Play some animation or something, therefore allow a delay
-        LoadNextSceneDelayed(_sceneTransitionDelay, 4);
+        StartCoroutine(LoadNextSceneDelayed(_sceneTransitionDelay, 4));
 
     }
 
@@ -39,11 +40,12 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(sceneNumber);
-
     }
 
     void OnDisable()
     {
-        _player.PlayerKilled -= GameOver;
+      //  _player.PlayerKilled -= GameOver;
+        _dayNightController.TimeOut -= GameOver;
+      //  _home.VictoryTriggered -= Victory;
     }
 }

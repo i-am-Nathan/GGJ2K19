@@ -1,17 +1,24 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class DayNightController : MonoBehaviour
 {
-
-    public Light sun;
-    public float secondsInFullDay = 120f;
+    
+    [SerializeField] private Light sun;
+    [SerializeField] private float secondsInFullDay = 120f;
     [Range(0, 1)]
-    public float currentTimeOfDay = 0.8f;
+    [SerializeField] private float currentTimeOfDay = 0.8f;
     [HideInInspector]
-    public float timeMultiplier = 1f;
+    [SerializeField] private float timeMultiplier = 1f;
 
-    float sunInitialIntensity;
+    private float sunInitialIntensity;
+    
+    //delegate
+    public delegate void OnSunRise();
+
+    //events
+    public event OnSunRise TimeOut;
 
     void Start()
     {
@@ -28,7 +35,14 @@ public class DayNightController : MonoBehaviour
         {
             currentTimeOfDay = 0;
         }
+
+        if (currentTimeOfDay > 0.5f && currentTimeOfDay < 0.8f)
+        {
+            if (TimeOut != null) TimeOut();
+        }
     }
+
+ 
 
     void UpdateSun()
     {
