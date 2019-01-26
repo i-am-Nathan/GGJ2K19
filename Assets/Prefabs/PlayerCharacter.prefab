@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4335910339759110}
   m_Layer: 0
-  m_Name: Player 1 1
+  m_Name: PlayerCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 114506675500423578}
 --- !u!114 &114213467646819934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
