@@ -5,7 +5,14 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour {
 
     public float speed;
-    private bool isBat = false;
+    [SerializeField] private bool isBat = false;
+
+
+    //Delegates
+    public delegate void OnPlayerKilled();
+
+    //Events
+    public event OnPlayerKilled PlayerKilled;
 
     void FixedUpdate()
     {
