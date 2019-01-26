@@ -16,7 +16,7 @@ public class LightRay : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag = "Player")
+        if(other.gameObject.tag == "Player")
         {
             //TODO: Decrease the health of player
         }
