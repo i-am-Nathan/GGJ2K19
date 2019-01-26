@@ -8,42 +8,42 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField] private float timer;
-    [SerializeField] private CharacterMovement player;
-    [SerializeField] private HomeBehavior home;
-    [SerializeField] private float sceneTransitionDelay;
+    [SerializeField] private float _timer;
+    [SerializeField] private CharacterMovement _player;
+    [SerializeField] private HomeBehavior _home;
+    [SerializeField] private float _sceneTransitionDelay;
    
 
 
 	// Use this for initialization
 	void Start ()
 	{
-	    player.PlayerKilled += GameOver;
-        home.VictoryTriggered += Victory;
+	    _player.PlayerKilled += GameOver;
+        _home.VictoryTriggered += Victory;
 
 	}
 
     void Victory()
     {
-        LoadNextSceneDelayed(sceneTransitionDelay, "VictoryScene");
+        LoadNextSceneDelayed(_sceneTransitionDelay, 3);
     }
 
     void GameOver()
     {
         //Play some animation or something, therefore allow a delay
-        LoadNextSceneDelayed(sceneTransitionDelay, "EndScene" );
+        LoadNextSceneDelayed(_sceneTransitionDelay, 4);
 
     }
 
-    IEnumerator LoadNextSceneDelayed(float time, String sceneName)
+    IEnumerator LoadNextSceneDelayed(float time, int sceneNumber)
     {
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneNumber);
 
     }
 
     void OnDisable()
     {
-        player.PlayerKilled -= GameOver;
+        _player.PlayerKilled -= GameOver;
     }
 }
