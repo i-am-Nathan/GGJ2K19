@@ -507,7 +507,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  isBat: 0
 --- !u!114 &114944298609468212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -530,6 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f72c655478b139449da2c1649c49f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBat: 0
 --- !u!135 &135165787653963600
 SphereCollider:
   m_ObjectHideFlags: 1
