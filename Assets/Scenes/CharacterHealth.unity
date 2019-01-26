@@ -207,11 +207,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224577830329621562, guid: 59d1328ef4d4a7749b73773a26b66a09,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4335910339759110, guid: 59d1328ef4d4a7749b73773a26b66a09, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -244,24 +239,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114085685640722022, guid: 59d1328ef4d4a7749b73773a26b66a09,
-        type: 2}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 1518752809}
-    - target: {fileID: 224907632451864268, guid: 59d1328ef4d4a7749b73773a26b66a09,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224159060796439026, guid: 59d1328ef4d4a7749b73773a26b66a09,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 224907632451864268, guid: 59d1328ef4d4a7749b73773a26b66a09,
         type: 2}
       propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224907632451864268, guid: 59d1328ef4d4a7749b73773a26b66a09,
+        type: 2}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224159060796439026, guid: 59d1328ef4d4a7749b73773a26b66a09,
@@ -274,20 +259,14 @@ Prefab:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114506675500423578, guid: 59d1328ef4d4a7749b73773a26b66a09,
+    - target: {fileID: 224159060796439026, guid: 59d1328ef4d4a7749b73773a26b66a09,
         type: 2}
-      propertyPath: m_Value
-      value: 100
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59d1328ef4d4a7749b73773a26b66a09, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1518752809 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114506675500423578, guid: 59d1328ef4d4a7749b73773a26b66a09,
-    type: 2}
-  m_PrefabInternal: {fileID: 486415396}
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1815882466
 GameObject:
   m_ObjectHideFlags: 0
