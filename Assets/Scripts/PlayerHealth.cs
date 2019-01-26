@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterHealth : MonoBehaviour {
+public class PlayerHealth : MonoBehaviour {
 	public float startingHealth = 100f;
 	public float currentHealth;
 	public Slider healthSlider;
 
-	CharacterMovement characterMovement;
-	CharacterMorph characterMorph;
+	PlayerMovement playerMovement;
+	PlayerMorph playerMorph;
 	bool isDead;
 
 	// Use this for initialization
 	void Start () {
-		characterMovement = GetComponent <CharacterMovement> ();
-		characterMorph = GetComponent <CharacterMorph> ();
+		playerMovement = GetComponent <PlayerMovement> ();
+		playerMorph = GetComponent <PlayerMorph> ();
 		currentHealth = startingHealth;
 	}
 	

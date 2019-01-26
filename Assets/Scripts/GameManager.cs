@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField] private CharacterMovement _player;
+    [SerializeField] private PlayerMovement _player;
     [SerializeField] private HomeBehavior _home;
     [SerializeField] private float _sceneTransitionDelay = 2f;
     [SerializeField] private DayNightController _dayNightController;
