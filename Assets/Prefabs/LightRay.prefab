@@ -123,10 +123,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1885856474394446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63e89f69b548ba044a77de8035adab93, type: 3}
+  m_Script: {fileID: 11500000, guid: fcd28eae2fb8eaf47aa6b9c1e7872f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castingRadius: 0
+  castingRadius: 50
 --- !u!114 &114735589883173814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1775187839748386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f2af7f81c35cb45ac2f29b6c04d39a, type: 3}
+  m_Script: {fileID: 11500000, guid: d857453e9707043449fa33f5b2a56c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
