@@ -4,13 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
-	public float startingHealth = 100f;
+
+    //Delegates
+    public delegate void OnPlayerKilled();
+
+    //Events
+    public event OnPlayerKilled PlayerKilled;
+
+    public float startingHealth = 100f;
 	public float currentHealth;
 	public Slider healthSlider;
 
 	PlayerMovement playerMovement;
 	PlayerMorph playerMorph;
 	bool isDead;
+
 
 	// Use this for initialization
 	void Start () {
@@ -27,5 +35,10 @@ public class PlayerHealth : MonoBehaviour {
 	public void TakeDamage (float amount) {
 		currentHealth -= amount;
 		healthSlider.value = currentHealth;
+        if(healthSlider.value <= 0f)
+        {
+            Debug.Log("GAMEOBER");
+            //PlayerKilled();
+        }
 	}	
 }

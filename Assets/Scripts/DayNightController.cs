@@ -36,10 +36,10 @@ public class DayNightController : MonoBehaviour
             currentTimeOfDay = 0;
         }
 
-        if (currentTimeOfDay > 0.5f && currentTimeOfDay < 0.8f)
-        {
-            if (TimeOut != null) TimeOut();
-        }
+        //if (currentTimeOfDay > 0.5f && currentTimeOfDay < 0.8f)
+        //{
+        //    if (TimeOut != null) TimeOut();
+        //}
     }
 
  
