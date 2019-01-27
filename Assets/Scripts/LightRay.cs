@@ -26,8 +26,7 @@ public class LightRay : MonoBehaviour {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down)* sphereHit.distance, Color.yellow);
             if (sphereHit.collider.gameObject.CompareTag("Player"))
             {
-                //TODO: Damage health
-                print("Ow");
+                sphereHit.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(0.1f);
             }
         }
     }
