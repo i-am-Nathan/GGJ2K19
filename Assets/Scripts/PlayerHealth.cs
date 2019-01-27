@@ -20,14 +20,14 @@ public class PlayerHealth : MonoBehaviour {
 	bool isDead;
 
     private Renderer _renderer;
-    private ParticleSystem.EmissionModule particleSystem;
+    private ParticleSystem particleSystem;
 
 
 	// Use this for initialization
 	void Start () {
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerMorph = GetComponent <PlayerMorph> ();
-        particleSystem = GetComponent<ParticleSystem>().emission;
+        particleSystem = GetComponent<ParticleSystem>();
 		currentHealth = startingHealth;
 	}
 	
@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void TakeDamage (float amount) {
-        particleSystem.enabled = true;
+        particleSystem.Play();
         currentHealth -= amount;
 		healthSlider.value = currentHealth;
    
@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour {
             Debug.Log("GAMEOBER");
             //PlayerKilled();
         }
-        particleSystem.enabled = false;
+        particleSystem.Stop();
 	}	
     
     IEnumerator Flasher()

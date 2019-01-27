@@ -21,7 +21,7 @@ public class LightRay : MonoBehaviour {
                 
         RaycastHit sphereHit;
         Ray ray = new Ray(transform.position, transform.TransformDirection(Vector3.down));
-        if(Physics.Raycast(ray, out sphereHit, rayLength))
+        if(Physics.Raycast(ray, out sphereHit, Mathf.Infinity))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down)* sphereHit.distance, Color.yellow);
             if (sphereHit.collider.gameObject.CompareTag("Player"))
