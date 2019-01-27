@@ -17,7 +17,7 @@ public class LightRay : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
                 
         RaycastHit sphereHit;
         Ray ray = new Ray(transform.position, transform.TransformDirection(Vector3.down));
@@ -26,7 +26,8 @@ public class LightRay : MonoBehaviour {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down)* sphereHit.distance, Color.yellow);
             if (sphereHit.collider.gameObject.CompareTag("Player"))
             {
-                sphereHit.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(0.08f);
+                //TODO: Damage health
+                print("Ow");
             }
         }
     }
