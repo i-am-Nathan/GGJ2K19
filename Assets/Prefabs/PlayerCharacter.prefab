@@ -84,9 +84,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4653424168539108}
   - component: {fileID: 114504643552717378}
+  - component: {fileID: 54292179681395598}
   m_Layer: 0
   m_Name: VampireOrient
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,9 +119,10 @@ GameObject:
   - component: {fileID: 4344191135916474}
   - component: {fileID: 114870699079218906}
   - component: {fileID: 95124406970922464}
+  - component: {fileID: 54892393497733240}
   m_Layer: 0
   m_Name: Bat
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -762,6 +764,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1413847026589190}
   m_Mesh: {fileID: 4300000, guid: eaad31308069a214ea008cbb367b09ea, type: 3}
+--- !u!54 &54292179681395598
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1194736658488972}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!54 &54535612465847786
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -776,6 +793,21 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!54 &54892393497733240
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1240435927798406}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!81 &81882137465976572
 AudioListener:
