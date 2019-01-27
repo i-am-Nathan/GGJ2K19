@@ -11,13 +11,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlayerMovement _player;
     [SerializeField] private HomeBehavior _home;
     [SerializeField] private float _sceneTransitionDelay = 2f;
-    [SerializeField] private DayNightController _dayNightController;
+    private DayNightController _dayNightController;
     
 
 
 	// Use this for initialization
 	void Start ()
 	{
+        _dayNightController = this.GetComponent<DayNightController>();
 	   // _player.PlayerKilled += GameOver;
 	    _dayNightController.TimeOut += GameOver;
      //   _home.VictoryTriggered += Victory;

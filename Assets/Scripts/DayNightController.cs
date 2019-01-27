@@ -46,7 +46,7 @@ public class DayNightController : MonoBehaviour
 
     void UpdateSun()
     {
-        sun.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360f) - 90, 170, 0);
+        sun.transform.localRotation = Quaternion.Euler((currentTimeOfDay * 360f) - 90, -90, 0);
 
         float intensityMultiplier = 1;
         if (currentTimeOfDay <= 0.23f || currentTimeOfDay >= 0.75f)
