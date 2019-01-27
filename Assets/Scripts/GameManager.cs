@@ -27,13 +27,13 @@ public class GameManager : MonoBehaviour
 
     void Victory()
     {
-        StartCoroutine(LoadNextSceneDelayed(_sceneTransitionDelay, 3));
+        StartCoroutine(LoadNextSceneDelayed(_sceneTransitionDelay, 1));
     }
 
     void GameOver()
     {
         //Play some animation or something, therefore allow a delay
-        StartCoroutine(LoadNextSceneDelayed(_sceneTransitionDelay, 4));
+        StartCoroutine(LoadNextSceneDelayed(_sceneTransitionDelay, 2));
 
     }
 

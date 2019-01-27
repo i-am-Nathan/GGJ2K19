@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour {
-	public float startingHealth = 100f;
+	public float startingHealth = 1f;
 	public float currentHealth;
 	public Slider healthSlider;
 

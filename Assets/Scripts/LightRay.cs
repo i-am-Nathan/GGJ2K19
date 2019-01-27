@@ -27,7 +27,7 @@ public class LightRay : MonoBehaviour {
             if (sphereHit.collider.gameObject.CompareTag("GameController"))
             {
                 Debug.Log("kill me");
-                sphereHit.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(0.1f);
+                sphereHit.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(0.001f);
             }
         }
     }

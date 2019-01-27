@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterHealth.unity
     guid: fc34463a3d79f274c9c48b7545701bc7
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: 0873b584eaf16e844af300edf7908d82
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 5bd63040ba21902448ec3e2211b4f699
   m_configObjects: {}

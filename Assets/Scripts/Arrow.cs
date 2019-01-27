@@ -16,7 +16,7 @@ public class Arrow : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            playerHealth.TakeDamage(20f);
+            playerHealth.TakeDamage(0.02f);
             Object.Destroy(this.gameObject);
         }
     }

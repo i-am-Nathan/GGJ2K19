@@ -14,7 +14,7 @@ public class GetEaten : MonoBehaviour {
     {
         if(other.tag == "Player")
         {
-            playerHealth.TakeDamage(-30f);
+            playerHealth.TakeDamage(-0.03f);
             Destroy(gameObject);
 
         }

@@ -16,7 +16,7 @@ public class PlayerMorph : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (playerHealth.currentHealth > 0 && isBat) {
-			playerHealth.TakeDamage (0.1f);
+			playerHealth.TakeDamage (0.0001f);
 		}
 	}
 
