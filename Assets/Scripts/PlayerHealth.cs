@@ -11,9 +11,13 @@ public class PlayerHealth : MonoBehaviour {
 	PlayerMovement playerMovement;
 	PlayerMorph playerMorph;
 	bool isDead;
+    //Delegates
+    public delegate void OnPlayerKilled();
 
-	// Use this for initialization
-	void Start () {
+    //Events
+    public event OnPlayerKilled PlayerKilled;
+    // Use this for initialization
+    void Start () {
 		playerMovement = GetComponent <PlayerMovement> ();
 		playerMorph = GetComponent <PlayerMorph> ();
 		currentHealth = startingHealth;
@@ -30,7 +34,7 @@ public class PlayerHealth : MonoBehaviour {
         if(healthSlider.value <= 0f)
         {
             Debug.Log("GAMEOBER");
-            //PlayerKilled();
+            PlayerKilled();
         }
 	}	
     

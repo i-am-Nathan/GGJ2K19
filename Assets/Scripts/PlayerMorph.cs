@@ -26,9 +26,9 @@ public class PlayerMorph : MonoBehaviour {
 			this.transform.Find ("VampireOrient").gameObject.SetActive (!isBat);
 			this.transform.Find ("Bat").gameObject.SetActive (isBat);
 			if (isBat) {
-				playerMovement.speed = 20f;
+				playerMovement.speed = 4f;
 			} else {
-				playerMovement.speed = 5f;
+				playerMovement.speed = 2f;
 			}
 		}
 	}

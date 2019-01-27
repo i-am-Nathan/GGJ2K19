@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField] private PlayerMovement _player;
+    [SerializeField] private PlayerHealth _player;
     [SerializeField] private HomeBehavior _home;
     [SerializeField] private float _sceneTransitionDelay = 2f;
     private DayNightController _dayNightController;
@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 	void Start ()
 	{
         _dayNightController = this.GetComponent<DayNightController>();
-	   // _player.PlayerKilled += GameOver;
+	    _player.PlayerKilled += GameOver;
 	    _dayNightController.TimeOut += GameOver;
      //   _home.VictoryTriggered += Victory;
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     void OnDisable()
     {
-      //  _player.PlayerKilled -= GameOver;
+        _player.PlayerKilled -= GameOver;
         _dayNightController.TimeOut -= GameOver;
       //  _home.VictoryTriggered -= Victory;
     }

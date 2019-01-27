@@ -24,8 +24,9 @@ public class LightRay : MonoBehaviour {
         if(Physics.Raycast(ray, out sphereHit, Mathf.Infinity))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down)* sphereHit.distance, Color.yellow);
-            if (sphereHit.collider.gameObject.CompareTag("Player"))
+            if (sphereHit.collider.gameObject.CompareTag("GameController"))
             {
+                Debug.Log("kill me");
                 sphereHit.collider.gameObject.GetComponent<PlayerHealth>().TakeDamage(0.1f);
             }
         }
